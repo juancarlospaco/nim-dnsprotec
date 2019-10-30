@@ -4,7 +4,7 @@
 - 1 File, 0 Dependency, no config, no setup, crossplatform, works Offline, 60 lines of code.
 - Does **NOT overwrite `/etc/hosts` by default**, Backup by default, can delete itself (for Docker), runs on Alpine.
 
-![](https://raw.githubusercontent.com/juancarlospaco/nim-dnsprotec/master/temp.png)
+![](https://raw.githubusercontent.com/juancarlospaco/nim-dnsprotec/master/temp.png "Does NOT run 'sudo mv', just prints the command for you")
 
 
 # Use
