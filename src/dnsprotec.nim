@@ -19,6 +19,13 @@ const
   psh = prepro("https://hosts-file.net/psh.txt")
   pup = prepro("https://hosts-file.net/pup.txt")
   wrz = prepro("https://hosts-file.net/wrz.txt")
+  customUrls {.strdefine.} = ""
+  usr =
+    when customUrls.len > 0:
+      var res = ""
+      for url in customUrls.split(","): res.add prepro(url) & "\n"
+      res
+    else: ""
 
 proc backup(): tuple[output: TaintedString, exitCode: int] =
   let filesha = getCurrentDir() / "hosts_" & replace($now(), ":", "_") & ".sha512"
@@ -57,6 +64,9 @@ when isMainModule:
     newHosts.add pup
   if readLineFromStdin("Block Warez, Cracks ? (y/N): ").normalize == "y":
     newHosts.add wrz
+  when customUrls.len > 0:
+    if readLineFromStdin("Use your custom DNS Blacklist ? (y/N): ").normalize == "y":
+      newHosts.add usr
   let newfile = getCurrentDir() / "hosts"
   writeFile(newfile, newHosts)
   echo $newHosts.countLines & " hosts --> " & newfile
