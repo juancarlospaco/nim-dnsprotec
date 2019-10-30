@@ -23,7 +23,7 @@ $ nim c dnsprotec.nim
 - Force overwriting of `/etc/hosts` with `-d:overwrite`.
 - Your current `/etc/hosts` will be statically read as a base template for new host files.
 - Compilation requires Internet, but after that it works 100% Offline.
-- You can add your custom DNS Blacklists using:
+- You can add your custom local or remote DNS Blacklists on `hosts` file format, separated by comma:
 
 ```
 -d:customUrls="http://foo.io/hosts,http://bar.io/blacklist,http://127.0.0.1/blockedDNS"
