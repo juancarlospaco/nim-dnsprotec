@@ -43,3 +43,9 @@ As a side-effect, Spotify desktop app behaves like Premium, it will not show Ads
 
 If it stops playing music disable the DNS protec, use it for a while, and you can enable it back later,
 it seems from time to time it checks with Spotify servers, but yeah Spotify Premium for free ;)
+
+
+# Why
+
+I know there are other scripts, but those need a virtual machine or interpreter,
+and need to be online to work properly, I needed one that can work offline and standalone.
