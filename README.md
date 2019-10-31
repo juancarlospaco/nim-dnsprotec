@@ -35,3 +35,11 @@ $ nim c dnsprotec.nim
 ```
 -d:customUrls="http://foo.io/hosts,http://bar.io/blacklist,http://127.0.0.1/blockedDNS"
 ```
+
+
+# Spotify
+
+As a side-effect, Spotify desktop app behaves like Premium, it will not show Ads, but plays music.
+
+If it stops playing music disable the DNS protec, use it for a while, and you can enable it back later,
+it seems from time to time it checks with Spotify servers, but yeah Spotify Premium for free ;)
