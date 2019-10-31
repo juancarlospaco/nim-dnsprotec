@@ -21,6 +21,11 @@ $ dnsprotec
 - https://github.com/juancarlospaco/nim-dnsprotec/releases
 
 
+# Install
+
+- `nimble install dnsprotec`
+
+
 # Compile
 
 ```
